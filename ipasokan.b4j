@@ -1,0 +1,38 @@
+﻿Version=5.9
+AppType=StandardJava
+NumberOfModules=0
+Build1=Default,b4j.example
+NumberOfFiles=0
+NumberOfLibraries=2
+Library1=jcore
+Library2=jserver
+@EndOfDesignText@
+'Non-UI application (console / server application)
+#Region Project Attributes 
+	#CommandLineArgs:
+	#MergeLibraries: True 
+#End Region
+
+Sub Process_Globals
+	Dim srvr As Server
+End Sub
+
+Sub AppStart (Args() As String)
+	If Args.Length<1 Then
+		Log( " ")
+		Log("PORT BELUM DISETTING")
+		Log( " ")
+		ExitApplication
+	End If
+	
+	srvr.Initialize("")
+	srvr.Port =  Args(0)
+	srvr.Start
+	StartMessageLoop
+	Log("Server Started at port "& srvr.Port)
+End Sub
+
+'Return true to allow the default exceptions handler to handle the uncaught exception.
+Sub Application_Error (Error As Exception, StackTrace As String) As Boolean
+	Return True
+End Sub
