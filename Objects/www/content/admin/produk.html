@@ -1,0 +1,81 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="block">
+                <div class="header">
+                    LIST PRODUK
+                </div>
+                <div class="content content-white">
+                    <button class="btn btn-primary" onclick="tambah_produk()">
+                        TAMBAH PRODUK
+                    </button>
+                    <table class="table table-stripped" id="list_produk">
+                        <thead>
+                            <tr>
+                                <td>No</td>
+                                <td>Nama</td>
+                                <td>Status</td>
+                                <td>Keterangan</td>
+                                <td>Aksi</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" id="form_input_produk" hidden="true">
+        <div class="col-md-12">
+            <div class="block">
+                <div class="header">
+                    FORM INPUT PRODUK
+                </div>
+                <div class="content content-white control">
+                    <form id="tambah_produk" method="post" onsubmit="return onSubmit()">
+                        <div class="form-row">
+                            <div class="col-md-3">Nama</div>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" name="nama_produk" id="form_tambah_nama" placeholder="Masukkan Nama Produk">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-3">Status</div>
+                            <div class="col-md-3">
+                          		<select class="form-control" id="status_select">
+                                    <option value="">Tersedia</option>
+                                    <option value="" >Tidak Tersedia</option>
+                                    <option value="" >Lainnya</option>            
+                                </select>
+                            </div>
+                            <div class="col-md-6" hidden="true" id="form_tambah_status">
+                                <input type="text" class="form-control" name="status" placeholder="Masukkan Status Ketersediaan Produk">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-3">Keterangan</div>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" name="keterangan" id="form_tambah_keterangan" placeholder="Keterangan ">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-12">
+                                <button type="submit" class="btn btn-primary pull-right" style="margin-left: 5px;">Tambah </button>
+                                <button type="button" class="btn btn-default pull-right" onclick="batal_input_produk()">Batal</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/js/script/produk.js"></script>

@@ -18,6 +18,7 @@ Sub Process_Globals
 End Sub
 
 Sub AppStart (Args() As String)
+	Args = Array As String(8888)
 	If Args.Length<1 Then
 		Log( " ")
 		Log("PORT BELUM DISETTING")

@@ -4,5 +4,12 @@ $('#btn-clear').click(function() {
 });
 
 function login(){
-	window.location = "admin";
+	if ($('#username').val()=='') {
+		alert('Username harus diisi!');		
+	}else
+	if ($('#password').val()=='') {
+		alert('Password harus diisi!');		
+	}else{
+		window.location = "admin";		
+	}
 }

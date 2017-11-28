@@ -1,0 +1,126 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="block">
+                <div class="header">
+                    LIST USER
+                </div>
+                <div class="content content-white">
+                    <button class="btn btn-primary" onclick="tambah_user()">
+                        TAMBAH USER
+                    </button>
+                    <table class="table table-stripped" id="list_user">
+                        <thead>
+                            <tr>
+                                <td>Username</td>
+                                <td>ID</td>
+                                <td>Password</td>
+                                <td>Nama</td>
+                                <td>Alamat</td>
+                                <td>Email</td>
+                                <td>Telepon</td>
+                                <td>HP</td>
+                                <td>Status</td>
+                                <td>Aksi</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" id="form_input_user" hidden="true">
+        <div class="col-md-12">
+            <div class="block">
+                <div class="header">
+                    FORM INPUT USER
+                </div>
+                <div class="content content-white control">
+                    <form id="tambah_user" method="post" onsubmit="return onSubmit()">
+                        <div class="row">
+                            <!-- identity -->
+                            <div class="col-md-6">
+                                <div class="col-md-12">
+                                    <center>
+                                        <h4>Identitas</h4>
+                                    </center>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-6">NIP</div>
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" id="userTambahNIP" placeholder="123456789">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-6">Nama</div>
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" name="tambahNama" id="userTambahNama" placeholder="Masukkan Nama Lengkap">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-6">Username</div>
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" name="tambahUsername" id="userTambahUsername" placeholder="Masukkan username">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-6">Password</div>
+                                    <div class="col-md-6">
+                                        <input type="password" class="form-control" id="userTambahPassword" placeholder="Password">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- kontak -->
+                            <div class="col-md-6">
+                                <div class="col-md-12">
+                                    <center>
+                                        <h4>Kontak</h4>
+                                    </center>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-6">Email</div>
+                                    <div class="col-md-6">
+                                        <input type="email" class="form-control" id="userTambahEmail" placeholder="email@domain.com">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-6">Telepon</div>
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" name="tambahTelepon" id="userTambahTelepon" placeholder="+622145673">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-6">Handphone</div>
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" id="userTambahHP" placeholder="+628123456789">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-12">
+                                        <button type="submit" class="btn btn-primary pull-right" style="margin-left: 5px;">Tambah </button>
+                                        <button type="button" class="btn btn-default pull-right" onclick="batal_input_user()">Batal</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/js/script/user.js"></script>
